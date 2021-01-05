@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="/stylesheets/detail.css">
+<main class="container"
+    <div class="row">
+        <div class="col-lg-2 col-ls-0">
+        </div>
+        
+        <section class="col-lg-4 col-ls-12">
+            <div class="item">
+                <div class="item__content">
+                    <figure class="effect-zoe">
+                        <img src="<%= @poster %>" alt="">
+                        <figcaption>
+                            <h2><%= @title %></h2>
+                            <p class="icon-links">
+                                <a href="#"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>        
+        </section>
+        
+        <div class="col-lg-0 col-ls-0">
+        </div>
+        
+        <section class="col-lg-4 col-ls-12 info-table">
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td><%= @title %></td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td><%= @year %></td>
+                </tr>
+                <tr>
+                    <td>Rated</td>
+                    <td><%= @rated %></td>
+                </tr>
+                <tr>
+                    <td>Runtime</td>
+                    <td><%= @runtime %></td>
+                </tr>      
+                <tr>
+                    <td>Director</td>
+                    <td><%= @director %></td>
+                </tr>
+                <tr>
+                    <td>Actors</td>
+                    <td>
+                        <% @actors.split(", ").each do |actor| %>
+                            <li><%= actor %></li>
+                        <% end %>
+                    </td>
+                </tr>        
+                <tr>
+                    <td>IMDB Rating</td>
+                    <td>&nbsp&nbsp<%= @imdb_rating %>/10</td>
+                </tr>
+            </table>
+
+            <div class="movie-plot"><p><%= @plot %></p></div>
+        </section>
+        
+        <div class="col-lg-2 col-ls-0">
+        </div>
+    </div>
+</main>
+
+<script src="/javascripts/detail.js" charset="utf-8"></script>
+
+
+
+
+
+

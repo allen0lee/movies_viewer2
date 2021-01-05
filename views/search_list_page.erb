@@ -1,0 +1,29 @@
+<div class="masonry">
+    <% @movie_list.each do |movie| %>
+        <div class="item">
+            <div class="item__content">
+                <figure class="effect-zoe">
+                    <% if movie["Poster"]!="N/A" %>
+                        <img src="<%= movie["Poster"] %>" alt="">
+                    <% else %>
+                        <div class="img-placeholder">
+                            <span>Poster not available</span>
+                        </div>
+                    <% end %>
+                    <a href="/movie_infor/<%= movie["Title"] %>"></a>
+                    <figcaption>
+                        <h2><%= movie["Title"] %></h2>
+                        <p class="icon-links">
+                            <a href="#"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<script src="/javascripts/hoverEffect.js" charset="utf-8"></script>
+
